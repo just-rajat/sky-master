@@ -1,0 +1,31 @@
+server:
+  port: 8083
+  
+  servlet:
+    context-path: /api/v1/sky
+
+spring:
+  application:
+    name: sky-farmerBenificiary
+
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    procprd:
+      url: jdbc:postgresql://uat-hyd.cluster-cqiizwijdxjv.ap-south-2.rds.amazonaws.com:1521/postgres
+      username: uppselfregprd
+      password: password123
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        maximum-pool-size: 3
+        connection-timeout: 300000
+        idle-timeout: 600000
+        max-lifetime: 1800000
+
+file:
+  upload-dir: D:/FILEUPLOD/SKY/
